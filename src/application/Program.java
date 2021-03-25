@@ -24,6 +24,10 @@ public class Program {
 				System.out.print( "Origem: " );
 				ChessPosition source = UI.readChessPosition( sc );
 				
+				boolean [][] possibleMoves = chessMatch.possibleMoves( source );
+				UI.clearScreeen();
+				UI.printBoard( chessMatch.getPieces(), possibleMoves );
+				
 				System.out.println();
 				System.out.print( "Destino: " );
 				ChessPosition targer = UI.readChessPosition( sc );
